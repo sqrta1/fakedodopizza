@@ -1,0 +1,12 @@
+.navbar {
+  display: flex;
+}
+
+.navbar-left {
+  display: flex;
+}
+
+.navbar-logo {
+  width: 325px;
+  height: 110px;
+}
