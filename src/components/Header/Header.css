@@ -1,0 +1,62 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: rgb(92, 99, 112);
+}
+
+.header-left-main {
+  display: flex;
+  align-items: center;
+}
+
+.header-left-cityofdelivery {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header-left-timerating {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.header-left-cityname {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.header-left-cityname span {
+  color: rgb(255, 105, 0);
+  text-decoration: none;
+}
+.header-left-logo {
+  height: 105px;
+}
+
+.header-left-phone {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 50px;
+}
+
+.header-left-phone a {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+}
+
+.header-left-phone div {
+  color: grey;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.header-right {
+}
