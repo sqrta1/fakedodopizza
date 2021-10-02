@@ -2,11 +2,11 @@
   display: flex;
 }
 
-.navbar-left {
+.navbar-left-main {
   display: flex;
 }
 
-.navbar-logo {
+.navbar-left-logo {
   width: 325px;
   height: 110px;
 }
