@@ -1,6 +1,6 @@
 import './Button.css';
 
-function Button({ text, backgroundColor, color, fsize, mr }) {
+function Button({ text, backgroundColor, color, fsize, mr, padding }) {
   return (
     <button
       style={{

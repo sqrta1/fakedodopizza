@@ -1,0 +1,17 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 20px;
+}
+
+.nav .nav-links a {
+  font-size: 13px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.nav .nav-links a:hover {
+  color: rgb(255, 105, 0);
+}
