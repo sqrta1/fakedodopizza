@@ -1,0 +1,37 @@
+.offeritem {
+  width: 300px;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.offeritem-content {
+  width: 100%;
+  text-align: left;
+}
+
+.offeritem-content > h2 {
+  font-size: 20px;
+}
+
+.offeritem-content p {
+  font-size: 14px;
+  color: rgb(92, 99, 112);
+}
+.offeritem-content-img {
+  width: 100%;
+}
+
+.offeritem-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.offeritem-footer-price {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.offeritem-footer-button {
+  margin-right: 10px;
+}

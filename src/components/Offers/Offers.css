@@ -1,0 +1,14 @@
+.offers {
+  margin-top: 35px;
+}
+
+.offers > h2 {
+  font-size: 28px;
+  text-align: left;
+}
+
+.offers-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

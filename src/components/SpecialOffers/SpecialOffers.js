@@ -1,8 +1,8 @@
-import './Stories.css';
-
-import StoriesItem from '../StoriesItem/StoriesItem';
+import SpeicalOfferItem from '../SpecialOfferItem/SpecialOfferItem';
 
 import Slider from 'react-slick';
+
+import './SpecialOffers.css';
 
 function SampleNextArrow({ className, style, onClick }) {
   return (
@@ -24,29 +24,30 @@ function SamplePrevArrow({ className, style, onClick }) {
   );
 }
 
-function Stories() {
+function SpecialOffer() {
   const settings = {
     infinite: false,
-    slidesToShow: 6,
+    slidesToShow: 4,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
   return (
-    <div>
+    <div className="specialoffer">
+      <h2 className="specialoffer-text">Вам понравится</h2>
       <Slider {...settings}>
-        <StoriesItem />
-        <StoriesItem />
-        <StoriesItem />
-        <StoriesItem />
-        <StoriesItem />
-        <StoriesItem />
-        <StoriesItem />
-        <StoriesItem />
-        <StoriesItem />
+        <SpeicalOfferItem />
+        <SpeicalOfferItem />
+        <SpeicalOfferItem />
+        <SpeicalOfferItem />
+        <SpeicalOfferItem />
+        <SpeicalOfferItem />
+        <SpeicalOfferItem />
+        <SpeicalOfferItem />
+        <SpeicalOfferItem />
       </Slider>
     </div>
   );
 }
 
-export default Stories;
+export default SpecialOffer;
