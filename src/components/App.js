@@ -1,28 +1,19 @@
-import './App.css';
-import { Container, Row, Col } from 'reactstrap';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
-import NavBar from './NavBar/NavBar';
-import Stories from './Stories/Stories';
-import SpecialOffers from './SpecialOffers/SpecialOffers';
-import Offers from './Offers/Offers';
-import Info from './Info/Info';
-import Footer from './Footer/Footer';
+import Main from './Main/Main';
+
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Container>
-        <Row>
-          <Col>
-            <NavBar />
-            <Stories />
-            <SpecialOffers />
-            <Offers />
-            <Info />
-          </Col>
-        </Row>
-      </Container>
-      <Footer></Footer>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/">
+            <Main />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
