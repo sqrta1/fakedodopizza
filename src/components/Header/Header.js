@@ -22,8 +22,8 @@ function Header() {
         </div>
       </div>
       <div className="header-right">
-        <Button text={'Додокоины'} hover={true} />
-        <Button fsize={13} text={'Войти'} hover={true} />
+        <Button text={'Додокоины'} hover={true} width={100} />
+        <Button fsize={13} text={'Войти'} hover={true} width={75} />
       </div>
     </div>
   );

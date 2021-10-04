@@ -19,10 +19,10 @@ function App() {
             <SpecialOffers />
             <Offers />
             <Info />
-            <Footer />
           </Col>
         </Row>
       </Container>
+      <Footer></Footer>
     </div>
   );
 }

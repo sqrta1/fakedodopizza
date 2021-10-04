@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 import './Button.css';
 
-function Button({ hover, text, backgroundColor, color, fsize }) {
+function Button({ hover, text, backgroundColor, color, fsize, width }) {
   return (
-    <StyledButton backgroundColor={backgroundColor} hover={hover}>
+    <StyledButton backgroundColor={backgroundColor} hover={hover} width={width}>
       <StyledText color={color} fsize={fsize}>
         {text}
       </StyledText>
@@ -13,6 +13,7 @@ function Button({ hover, text, backgroundColor, color, fsize }) {
 }
 
 const DefaultButton = styled.button`
+  width: ${(props) => props.width}px;
   background-color: ${(props) => props.backgroundColor};
 `;
 

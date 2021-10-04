@@ -23,6 +23,7 @@ function Nav() {
           text={'Корзина | 0'}
           backgroundColor={'rgb(255, 105, 0)'}
           color={'white'}
+          width={125}
         />
       </div>
     </div>
