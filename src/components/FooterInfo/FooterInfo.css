@@ -1,3 +1,94 @@
 .footerinfo {
-  margin-top: 20px;
+  margin-top: 25px;
+}
+.footerinfo p,
+.footerinfo a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footerinfo a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.footerinfo-links {
+  display: flex;
+}
+
+.footerinfo-links > div {
+  display: flex;
+  flex-direction: column;
+  margin-right: 75px;
+  font-size: 16px;
+}
+
+.footerinfo-links > div > a {
+  cursor: pointer;
+}
+
+.footerinfo-links > div > h3 {
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+}
+.footerinfo-links-download {
+  display: flex;
+}
+
+.footerinfo-links-download a > img {
+  width: 125px;
+  margin-right: 10px;
+}
+
+.footerinfo-link-apple {
+  height: 38px;
+}
+
+.footerinfo-mail {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.footerinfo-about {
+  display: flex;
+  margin-top: 75px;
+}
+
+.footerinfo-about > div {
+  width: 300px;
+  margin-right: 50px;
+}
+
+.footerinfo-about > div > h2 {
+  font-size: 26px;
+  color: rgb(255, 255, 255);
+}
+
+.footerinfo-about > div > p {
+  margin-top: -20px;
+}
+
+.footerinfo-end {
+  display: flex;
+}
+
+.footerinfo-end > div {
+  margin-right: 20px;
+}
+
+.footerinfo-end-dodopizza {
+  display: flex;
+}
+
+.footerinfo-end-dodopizza > img {
+  width: 125px;
+  margin-bottom: 20px;
+  margin-right: 7.5px;
+}
+
+hr {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footerinfo-end-practicalinfo > a {
+  margin-right: 15px;
 }
