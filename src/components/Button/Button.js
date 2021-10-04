@@ -1,21 +1,34 @@
+import styled from 'styled-components';
+
 import './Button.css';
 
-function Button({ text, backgroundColor, color, fsize, mr, padding }) {
+function Button({ hover, text, backgroundColor, color, fsize }) {
   return (
-    <button
-      style={{
-        backgroundColor: `${backgroundColor}`,
-        marginRight: `${mr}px`,
-      }}>
-      <span
-        style={{
-          color: `${color}`,
-          fontSize: `${fsize}px`,
-        }}>
+    <StyledButton backgroundColor={backgroundColor} hover={hover}>
+      <StyledText color={color} fsize={fsize}>
         {text}
-      </span>
-    </button>
+      </StyledText>
+    </StyledButton>
   );
 }
 
+const DefaultButton = styled.button`
+  background-color: ${(props) => props.backgroundColor};
+`;
+
+const StyledText = styled.div`
+  color: ${(props) => props.color};
+  font-size: ${(props) => props.fsize}px;
+`;
+
+const HoveredButton = styled(DefaultButton)`
+  &:hover {
+    ${StyledText} {
+      color: black;
+    }
+  }
+`;
+
+const StyledButton = ({ hover = false, ...rest }) =>
+  hover ? <HoveredButton {...rest} /> : <DefaultButton {...rest} />;
 export default Button;

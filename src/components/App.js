@@ -2,6 +2,7 @@ import './App.css';
 import { Container, Row, Col } from 'reactstrap';
 
 import NavBar from './NavBar/NavBar';
+import Stories from './Stories/Stories';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Row>
           <Col>
             <NavBar />
+            <Stories />
           </Col>
         </Row>
       </Container>

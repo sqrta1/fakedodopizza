@@ -1,6 +1,17 @@
 button {
+  width: auto;
+  height: auto;
+  margin: 5px;
   border: none;
-  border-radius: 12.5px;
+  border-radius: 17.5px;
+  font-size: 13px;
   font-weight: 500;
   padding: 0 10px 5px 10px;
+  background-color: rgb(243, 243, 247);
+}
+
+button div {
+  text-align: center;
+  color: rgb(92, 99, 112);
+  padding: 5px 7.5px;
 }

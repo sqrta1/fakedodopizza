@@ -22,8 +22,8 @@ function Header() {
         </div>
       </div>
       <div className="header-right">
-        <Button fsize={13} text={'Додокоины'} backgroundColor={'rgb(243, 243, 247)'} mr={10} />
-        <Button fsize={13} text={'Войти'} backgroundColor={'rgb(243, 243, 247)'} />
+        <Button text={'Додокоины'} hover={true} />
+        <Button fsize={13} text={'Войти'} hover={true} />
       </div>
     </div>
   );
