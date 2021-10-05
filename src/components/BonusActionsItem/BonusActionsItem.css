@@ -1,0 +1,36 @@
+.bonusactionsitem {
+  margin-left: 10px;
+  width: 30%;
+  height: 40%;
+  margin-right: 30px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 0px 12px -4px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.bonusactionsitem-content > img {
+  width: 100%;
+}
+
+.bonusactionsitem-content > h2,
+.bonusactionsitem-content > p {
+  margin: 10px 10px 0px 15px;
+}
+
+.bonusactionsitem-content > p {
+  color: rgb(92, 99, 112);
+  line-height: 22px;
+}
+
+.bonusactionsitem-content > h2 {
+  font-size: 20px;
+}
+
+.bonusactionsitem-content {
+  margin-bottom: 30px;
+}
+
+.bonusactionsitem-button {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
