@@ -36,7 +36,6 @@
 
 .footerinfo-links-download a > img {
   width: 125px;
-  margin-right: 10px;
 }
 
 .footerinfo-link-apple {
@@ -46,6 +45,7 @@
 .footerinfo-mail {
   text-align: right;
   margin-top: 10px;
+  margin-right: 5px;
 }
 
 .footerinfo-about {
@@ -60,11 +60,11 @@
 
 .footerinfo-about > div > h2 {
   font-size: 26px;
+  line-height: 0;
   color: rgb(255, 255, 255);
 }
 
 .footerinfo-about > div > p {
-  margin-top: -20px;
 }
 
 .footerinfo-end {
