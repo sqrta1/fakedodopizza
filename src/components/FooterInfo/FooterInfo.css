@@ -1,5 +1,6 @@
 .footerinfo {
   margin-top: 25px;
+  width: 100%;
 }
 .footerinfo p,
 .footerinfo a {
@@ -20,6 +21,11 @@
   flex-direction: column;
   margin-right: 75px;
   font-size: 16px;
+}
+
+.footerinfo-links > div:nth-child(5) {
+  margin-right: 0;
+  margin-left: 50px;
 }
 
 .footerinfo-links > div > a {
@@ -69,6 +75,7 @@
 
 .footerinfo-end {
   display: flex;
+  align-items: flex-start;
 }
 
 .footerinfo-end > div {
@@ -81,7 +88,7 @@
 
 .footerinfo-end-dodopizza > img {
   width: 125px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   margin-right: 7.5px;
 }
 
