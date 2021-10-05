@@ -36,7 +36,7 @@ function FooterInfo() {
           <a href="https://www.dodokids.ru/">Экскурсии и мастер-классы</a>
           <a href="https://b2b.dodopizza.org/">Корпоративные заказы</a>
         </div>
-        <div>
+        <div className="footer-links-content">
           <div className="footerinfo-links-download">
             <a href="https://play.google.com/store/apps/details?id=ru.dodopizza.app&referrer=af_tranid%3DYpI21NF_7bBEYdza1sOIYQ%26af_ad%3Dicon%26pid%3Ddodopizza.site%26af_click_lookback%3D7d%26c%3Dweb">
               <img src={googleplay}></img>
@@ -78,21 +78,31 @@ function FooterInfo() {
           <a href="">Помощь</a>
         </div>
         <div className="footerinfo-social">
-          <a href="https://www.facebook.com/dodopizza">
-            <img></img>
-          </a>
-          <a href="https://www.instagram.com/dodopizza/">
-            <img></img>
-          </a>
-          <a href="https://ok.ru/dodopizza">
-            <img></img>
-          </a>
-          <a href="https://vk.com/dodo">
-            <img></img>
-          </a>
-          <a href="https://www.youtube.com/c/DodoPizzaRussia">
-            <img></img>
-          </a>
+          <div>
+            <a href="https://www.facebook.com/dodopizza">
+              <img></img>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/dodopizza/">
+              <img></img>
+            </a>
+          </div>
+          <div>
+            <a href="https://ok.ru/dodopizza">
+              <img></img>
+            </a>
+          </div>
+          <div>
+            <a href="https://vk.com/dodo">
+              <img></img>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.youtube.com/c/DodoPizzaRussia">
+              <img></img>
+            </a>
+          </div>
         </div>
       </div>
     </div>
