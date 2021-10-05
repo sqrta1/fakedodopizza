@@ -33,7 +33,7 @@ function Stories() {
     prevArrow: <SamplePrevArrow />,
   };
   return (
-    <div>
+    <div className="stories">
       <Slider {...settings}>
         <StoriesItem />
         <StoriesItem />
