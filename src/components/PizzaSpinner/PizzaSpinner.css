@@ -1,0 +1,36 @@
+.spinner-wrapper {
+  width: 100%;
+  position: relative;
+}
+.spinner-content {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+}
+.spinner-content img {
+  animation: rotating 1s linear infinite;
+}
+.spinner-content > div {
+  width: 70px;
+  position: absolute;
+  left: -90px;
+  top: 0;
+  animation: moving 3s linear infinite;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes moving {
+  from {
+    transform: translate(0%, 0);
+  }
+  to {
+    transform: translate(1400px, 0%);
+  }
+}

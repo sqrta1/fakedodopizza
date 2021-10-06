@@ -12,7 +12,15 @@ const getCards = () => {
         imgUrls = imgUrls.split(",").map((e) => e.split(" "));
         const title = card.children[0].children[1].innerText;
         const desc = card.children[0].innerText;
-        return { imgUrls: imgUrls, title: title, description: desc };
+        console.log(card.children[1].children[0].children[0].children[0]);
+        const price =
+          card.children[1].children[0].children[0].children[0].innerText;
+        return {
+          imgUrls: imgUrls,
+          title: title,
+          description: desc,
+          price: price,
+        };
       });
       return { title: headerText, id: id, items: elems };
     });
