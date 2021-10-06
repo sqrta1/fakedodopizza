@@ -1,0 +1,39 @@
+.profile {
+  background-color: rgb(243, 243, 247);
+}
+
+.profile-actions-main {
+  margin-bottom: 30px;
+}
+
+.profile-actions-main > h2 {
+  margin-top: 30px;
+  font-size: 23px;
+}
+
+.profile-actions-personal {
+  border-radius: 20px;
+  width: 237px;
+  height: 359px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(6 5 50 / 10%) 0px 6px 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.profile-actions-personal > img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.profile-actions-personal > p {
+  margin-top: 10px;
+  padding: 0px 30px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.profile-actions-main > a {
+  color: rgb(255, 105, 0);
+  text-decoration: none;
+}

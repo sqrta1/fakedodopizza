@@ -4,6 +4,7 @@ import NavBar from './NavBar/NavBar';
 import Footer from './Footer/Footer';
 import Main from './Main/Main';
 import BonusActions from './BonusActions/BonusActions';
+import Profile from './Profile/Profile';
 
 import './App.css';
 
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route path="/bonusactions">
             <BonusActions />
+          </Route>
+          <Route path="/profile">
+            <Profile />
           </Route>
         </Switch>
       </BrowserRouter>
