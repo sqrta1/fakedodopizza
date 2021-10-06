@@ -1,7 +1,6 @@
 import Button from "../Button/Button";
 
 import "./OfferItem.css";
-import pizza from "./pizza.jpeg";
 
 function OfferItem({ imgUrls, title, description, price }, id) {
   const filteredUrls = imgUrls.filter(([url, w]) => w.replace("w", "") <= 300);
