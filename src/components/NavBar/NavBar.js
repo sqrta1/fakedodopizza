@@ -7,9 +7,9 @@ import './NavBar.css';
 
 function NavBar() {
   return (
-    <Container>
+    <Container fluid={true}>
       <Row>
-        <Col>
+        <Col xl={{ size: 8, offset: 2 }}>
           <Header />
           <Nav />
         </Col>

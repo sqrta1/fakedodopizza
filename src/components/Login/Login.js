@@ -1,3 +1,5 @@
+//Перенести в header
+
 import './Login.css';
 
 import { useRef } from 'react';
@@ -33,9 +35,17 @@ function Login() {
     }
   };
 
-  return isLogged ? (
-    <Redirect to="/profile" />
-  ) : (
+  // return isLogged ? (
+  //   <Redirect to="/profile" />
+  // ) : (
+  //   <div className="login">
+  //     <div className="login-block">
+  //       <form></form>
+  //     </div>
+  //   </div>
+  // );
+
+  return (
     <div className="login">
       <div className="login-block">
         <form></form>

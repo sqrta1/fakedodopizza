@@ -4,16 +4,19 @@ import Stories from '../Stories/Stories';
 import SpecialOffers from '../SpecialOffers/SpecialOffers';
 import Offers from '../Offers/Offers';
 import Info from '../Info/Info';
+import Login from '../Login/Login';
 
 import './Main.css';
 
 function Main() {
   return (
-    <Container>
+    <Container fluid={true}>
       <Row>
-        <Col>
+        <Col xl={{ size: 8, offset: 2 }}>
           <Stories />
-          <SpecialOffers />
+        </Col>
+        <SpecialOffers />
+        <Col xl={{ size: 8, offset: 2 }}>
           <Offers />
           <Info />
         </Col>
