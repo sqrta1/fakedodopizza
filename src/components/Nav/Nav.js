@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import Button from '../Button/Button';
 
 import './Nav.css';
@@ -12,7 +14,7 @@ function Nav() {
         <a>Десерты</a>
         <a>Напитки</a>
         <a>Другие товары</a>
-        <a href="/bonusactions">Акции</a>
+        <Link to="/bonusactions">Акции</Link>
         <a>Контакты</a>
         <a>О нас</a>
         <a>Прямой эфир</a>

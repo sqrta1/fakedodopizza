@@ -1,10 +1,10 @@
 import './Input.css';
 
-function Input({ text }) {
+function Input({ text, type, height, width, refelem }) {
   return (
     <div className="input">
       <label>{text}</label>
-      <input type="text"></input>
+      <input ref={refelem} type={type} style={{ height, width }}></input>
     </div>
   );
 }

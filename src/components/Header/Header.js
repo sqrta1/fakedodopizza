@@ -1,19 +1,19 @@
-import Button from "../Button/Button";
+import Button from '../Button/Button';
 
-import "./Header.css";
-import navimg from "./navlogo.png";
-import { LoginModal } from "../Login/Login";
-import { useState } from "react/cjs/react.development";
+import './Header.css';
+import navimg from './navlogo.png';
+import { LoginModal } from '../Login/Login';
+import { useState } from 'react/cjs/react.development';
 
 function Header() {
   const [isModal, toogleModal] = useState(false);
   const handleLogin = () => {
-    document.body.classList.add("modal-login");
+    document.body.classList.add('modal-login');
     toogleModal(true);
   };
   const closeModal = () => {
-    console.log('call')
-    document.body.classList.remove("modal-login");
+    console.log('call');
+    document.body.classList.remove('modal-login');
     toogleModal(false);
   };
   return (
@@ -34,17 +34,9 @@ function Header() {
         </div>
       </div>
       <div className="header-right">
-        <Button text={"Додокоины"} hover={true} width={100} />
-        <Button
-          fsize={13}
-          text={"Войти"}
-          hover={true}
-          width={75}
-          onClick={handleLogin}
-        />
-        {isModal && (
-          <LoginModal closeModalhandler={closeModal}></LoginModal>
-        )}
+        <Button text={'Додокоины'} hover={true} width={100} />
+        <Button fsize={13} text={'Войти'} hover={true} width={75} onClick={handleLogin} />
+        {isModal && <LoginModal closeModalhandler={closeModal}></LoginModal>}
       </div>
     </div>
   );

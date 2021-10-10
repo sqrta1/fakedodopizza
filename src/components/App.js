@@ -11,8 +11,8 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <NavBar />
       <BrowserRouter>
+        <NavBar />
         <Switch>
           <Route exact path="/">
             <Main />
@@ -24,8 +24,8 @@ function App() {
             <Profile />
           </Route>
         </Switch>
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </div>
   );
 }

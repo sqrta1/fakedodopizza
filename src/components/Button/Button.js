@@ -1,24 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import "./Button.css";
+import './Button.css';
 
-function Button({
-  hover,
-  text,
-  backgroundColor,
-  color,
-  fsize,
-  width,
-  margin,
-  ...props
-}) {
+function Button({ hover, text, backgroundColor, color, fsize, width, margin, ...props }) {
   return (
-    <StyledButton
-      backgroundColor={backgroundColor}
-      hover={hover}
-      width={width}
-      {...props}
-    >
+    <StyledButton backgroundColor={backgroundColor} hover={hover} width={width} {...props}>
       <StyledText color={color} fsize={fsize} margin={margin}>
         {text}
       </StyledText>
