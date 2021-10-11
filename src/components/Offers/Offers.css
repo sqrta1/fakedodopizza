@@ -6,6 +6,8 @@
 .offers > h2 {
   font-size: 28px;
   text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .offers-content {

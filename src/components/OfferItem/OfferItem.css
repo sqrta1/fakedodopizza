@@ -1,5 +1,7 @@
 .offeritem {
+  position: relative;
   width: 300px;
+  height: 475px;
   cursor: pointer;
   margin-top: 50px;
 }
@@ -22,14 +24,18 @@
 }
 
 .offeritem-footer {
+  position: absolute;
+  bottom: 0;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   margin-top: 60px;
+  white-space: nowrap;
 }
 
 .offeritem-footer-price {
   font-size: 22px;
   font-weight: 500;
+  margin-right: 100px;
 }
 
 .offeritem-footer-button {
