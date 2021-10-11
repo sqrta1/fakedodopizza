@@ -8,12 +8,12 @@ function Nav() {
   return (
     <div className="nav">
       <div className="nav-links">
-        <a>Пицца</a>
-        <a>Комбо</a>
-        <a>Закуски</a>
-        <a>Десерты</a>
-        <a>Напитки</a>
-        <a>Другие товары</a>
+        <a href="#pizzas">Пицца</a>
+        <a href="#combos">Комбо</a>
+        <a href="#snacks">Закуски</a>
+        <a href="#desserts">Десерты</a>
+        <a href="#drinks">Напитки</a>
+        <a href="#other">Другие товары</a>
         <Link to="/bonusactions">Акции</Link>
         <a>Контакты</a>
         <a>О нас</a>
