@@ -1,9 +1,8 @@
-import { useEffect, useState, Fragment } from "react";
-import { Spinner } from "reactstrap";
-import PizzaSpinner from "../PizzaSpinner/PizzaSpinner";
-import OfferItem from "../OfferItem/OfferItem";
-import { fetchItems } from "../../api";
-import "./Offers.css";
+import { useEffect, useState, Fragment } from 'react';
+import PizzaSpinner from '../PizzaSpinner/PizzaSpinner';
+import OfferItem from '../OfferItem/OfferItem';
+import { fetchItems } from '../../api';
+import './Offers.css';
 
 function Offers() {
   const [data, setData] = useState([]);

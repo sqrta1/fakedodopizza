@@ -1,7 +1,7 @@
 import Button from '../Button/Button';
 
 import './Header.css';
-import navimg from './navlogo.png';
+import navimg from './navlogo.svg';
 import { LoginModal } from '../Login/Login';
 import { useState } from 'react/cjs/react.development';
 

@@ -14,9 +14,7 @@ function Main() {
       <Row>
         <Col xl={{ size: 8, offset: 2 }}>
           <Stories />
-        </Col>
-        <SpecialOffers />
-        <Col xl={{ size: 8, offset: 2 }}>
+          <SpecialOffers />
           <Offers />
           <Info />
         </Col>
