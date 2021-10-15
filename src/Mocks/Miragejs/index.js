@@ -9,7 +9,7 @@ const tmpFunc = (db, request) => {
 const RoutesHandlers = [
   {
     type: 'get',
-    url: '/api/items',
+    url: '/items',
     handler: getItems,
   },
 ];
@@ -24,7 +24,7 @@ const mirageJS = new Server({
     });
   },
   routes() {
-    this.namespace = '';
+    this.namespace = '/api';
     RoutesHandlers.forEach(({ type, url, handler, response, auth }) => {
       //this[type](url, auth ? withAuth(handler) : handler, response);
       this[type](url, handler, response);

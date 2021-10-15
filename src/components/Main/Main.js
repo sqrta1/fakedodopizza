@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import Stories from '../Stories/Stories';
 import SpecialOffers from '../SpecialOffers/SpecialOffers';
 import Offers from '../Offers/Offers';
-import Info from '../Info/Info';
+import Info from '../../layout/Info/Info';
 import Login from '../Login/Login';
 
 import './Main.css';

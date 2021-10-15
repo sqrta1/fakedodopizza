@@ -1,9 +1,5 @@
 .header {
   display: flex;
-  align-items: center;
-
-  justify-content: space-between;
-  height: 80px;
   width: 100%;
   color: rgb(92, 99, 112);
 }
