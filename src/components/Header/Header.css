@@ -1,11 +1,13 @@
 .header {
   display: flex;
-  align-items: center;
-
   justify-content: space-between;
-  height: 80px;
   width: 100%;
+  margin-top: 20px;
   color: rgb(92, 99, 112);
+}
+
+.header-left {
+  margin-left: -25px;
 }
 
 .header-left-main {
@@ -35,7 +37,7 @@
   text-decoration: none;
 }
 .header-left-logo {
-  height: 45px;
+  height: 47.5px;
 }
 
 .header-left-phone {
@@ -62,4 +64,5 @@
 
 .header-right {
   margin-bottom: 25px;
+  margin-right: -25px;
 }
