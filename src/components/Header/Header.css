@@ -2,6 +2,8 @@
   display: flex;
   width: 100%;
   color: rgb(92, 99, 112);
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-left-main {
@@ -32,6 +34,7 @@
 }
 .header-left-logo {
   height: 105px;
+  width: 250px;
 }
 
 .header-left-phone {

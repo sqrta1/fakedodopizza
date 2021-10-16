@@ -1,11 +1,15 @@
-.nav {
+.dodo-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 2;
 }
 
-.nav > .nav-links > a {
+.dodo-nav .nav-links > a {
   font-size: 14px;
   font-weight: 500;
   margin-right: 15px;
@@ -14,6 +18,11 @@
   cursor: pointer;
 }
 
-.nav .nav-links a:hover {
+.dodo-nav .nav-links a:hover {
   color: rgb(255, 105, 0);
+}
+.dodo-row{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
