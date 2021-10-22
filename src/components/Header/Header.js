@@ -13,7 +13,7 @@ function Header() {
     setModal(!isModal);
   };
   return (
-    <Container>
+    <Container id="header">
       <div className="header">
         <div className="header-left">
           <div className="header-left-main">

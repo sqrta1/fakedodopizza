@@ -4,9 +4,9 @@ import Footer from "./Footer/Footer";
 import Main from "./Main/Main";
 import BonusActions from "./BonusActions/BonusActions";
 import Profile from "./Profile/Profile";
-
-import "./App.css";
 import Header from "./Header/Header";
+import "./App.css";
+import "../media/fonts/dodo.woff2";
 
 function App() {
   return (

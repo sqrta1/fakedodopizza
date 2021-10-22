@@ -1,3 +1,9 @@
-.modal-login{
-    overflow-y: hidden;
+.modal-login {
+  overflow-y: hidden;
+}
+@font-face {
+  font-family: "dodo";
+  src: local("../media/fonts/dodo.woff2"),
+    url("../media/fonts/dodo.woff2") format("woff2");
+  font-weight: 500;
 }

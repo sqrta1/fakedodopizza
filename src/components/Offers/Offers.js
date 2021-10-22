@@ -1,4 +1,4 @@
-import { useEffect, useState, Fragment } from "react";
+import { useEffect, useState, Fragment, useRef } from "react";
 import { withRouter } from "react-router";
 import PizzaSpinner from "../PizzaSpinner/PizzaSpinner";
 import OfferItem from "../OfferItem/OfferItem";
@@ -9,19 +9,16 @@ function Offers({ location }) {
   const [data, setData] = useState([]);
   const [err, setError] = useState(null);
   const [isLoading, setLoading] = useState(true);
+  const refs = useRef([]);
   const scrollTo = (id) => {
     document.querySelector(`${id}`).scrollIntoView();
   };
   const getItems = async () => {
     try {
       const items = await fetchItems();
-      console.log(items);
       setData(items);
       setLoading(false);
       setError(null);
-      if (location.hash) {
-        scrollTo(location.hash);
-      }
     } catch (error) {
       setError(error.message);
       setData([]);
@@ -31,10 +28,13 @@ function Offers({ location }) {
   useEffect(() => {
     if (!data.length) {
       getItems();
-    } else {
+    }
+  }, [data]);
+  useEffect(() => {
+    if (location.hash && refs.current.length) {
       scrollTo(location.hash);
     }
-  }, [location.hash]);
+  });
   return (
     <div className="offers">
       {err && <div>{`${err} Retrying...`}</div>}
@@ -44,8 +44,13 @@ function Offers({ location }) {
           return (
             <Fragment key={index}>
               <h2 key={index}>{title}</h2>
-              <div id={id} className="offers-content">
-                {id === "ss" && <OfferItem></OfferItem>}
+              <div
+                id={id}
+                ref={(elem) => {
+                  refs.current[index] = elem;
+                }}
+                className="offers-content"
+              >
                 {items.map((item, ind) => (
                   <OfferItem key={ind} {...item} />
                 ))}
