@@ -41,9 +41,13 @@ function Nav(props) {
     }
     offsets.forEach(([elem, offsetTop, clientHeight]) => {
       if (currentPos >= offsetTop && currentPos <= offsetTop + clientHeight) {
-        elem.setAttribute("data-active", true);
+        requestAnimationFrame(() => {
+          elem.setAttribute("data-active", true);
+        });
       } else {
-        elem.setAttribute("data-active", false);
+        requestAnimationFrame(() => {
+          elem.setAttribute("data-active", false);
+        });
       }
     });
   }

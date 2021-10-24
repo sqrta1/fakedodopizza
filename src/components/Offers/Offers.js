@@ -31,8 +31,13 @@ function Offers({ location }) {
     }
   }, [data]);
   useEffect(() => {
-    if (location.hash && refs.current.length) {
-      scrollTo(location.hash);
+    if (location.hash && data.length) {
+      const [nodeElem] = refs.current.filter(
+        (e) => `#${e.id}` === location.hash
+      );
+      requestAnimationFrame(() => {
+        nodeElem.scrollIntoView();
+      });
     }
   });
   return (
