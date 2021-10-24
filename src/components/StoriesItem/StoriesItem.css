@@ -1,6 +1,12 @@
 .storiesitem {
   border-radius: 25px;
 }
+.storiesitem:last-of-type {
+  float: right;
+}
+.storiesitem:first-of-type {
+  float: left;
+}
 
 .storiesitem-img {
   border-radius: 20px;

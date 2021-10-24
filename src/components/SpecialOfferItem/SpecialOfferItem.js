@@ -1,6 +1,6 @@
-import './SpecialOfferItem.css';
+import "./SpecialOfferItem.css";
 
-import dodster from './dodster.jpeg';
+import dodster from "./dodster.jpeg";
 
 function SpeicalOfferItem() {
   return (
@@ -13,5 +13,4 @@ function SpeicalOfferItem() {
     </div>
   );
 }
-
 export default SpeicalOfferItem;

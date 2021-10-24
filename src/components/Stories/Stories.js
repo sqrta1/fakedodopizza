@@ -1,36 +1,15 @@
-import './Stories.css';
-
-import StoriesItem from '../StoriesItem/StoriesItem';
-
-import Slider from 'react-slick';
-
-function SampleNextArrow({ className, style, onClick }) {
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: 'block', background: 'red' }}
-      onClick={onClick}
-    />
-  );
-}
-
-function SamplePrevArrow({ className, style, onClick }) {
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: 'block', background: 'green' }}
-      onClick={onClick}
-    />
-  );
-}
+import Slider from "react-slick";
+import StoriesItem from "../StoriesItem/StoriesItem";
+import SlickArrow from "../../layout/SlickArrow/SlickArrow";
+import "./Stories.css";
 
 function Stories() {
   const settings = {
     infinite: false,
     slidesToShow: 6,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    prevArrow: <SlickArrow direction='left'/>,
+    nextArrow: <SlickArrow  direction='right'/>,
   };
   return (
     <div className="stories">

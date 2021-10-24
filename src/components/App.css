@@ -1,6 +1,12 @@
 .modal-login {
   overflow-y: hidden;
 }
+.container-fluid{
+  padding: 0px;
+}
+.container{
+  padding: 0px;
+}
 @font-face {
   font-family: "dodo";
   src: local("../media/fonts/dodo.woff2"),
