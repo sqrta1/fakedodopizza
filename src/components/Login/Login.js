@@ -9,7 +9,7 @@ import getOTP from "../../Mocks/OTP";
 
 import "./Login.css";
 
-function Login({ close }) {
+function Login({ close,setAuthorized }) {
   const [email, setEmail] = useState("");
   const emailElem = useRef("");
   const codeElem = useRef("");
@@ -54,6 +54,7 @@ function Login({ close }) {
       if (status === "ok") {
         localStorage.setItem("jwt", jwt);
         close();
+        setAuthorized(true);
         history.push("profile");
       }
     } catch (error) {

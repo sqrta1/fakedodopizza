@@ -7,11 +7,15 @@ import Profile from "./Profile/Profile";
 import Header from "./Header/Header";
 import "./App.css";
 import "../media/fonts/dodo.woff2";
+import { useState } from "react";
+import PrivateRoute from "./PrivateRoute/Privateroute";
 
 function App() {
+  const jwt = localStorage.getItem("jwt");
+  const [isAuthorized, setAuthorized] = useState(!!jwt);
   return (
     <BrowserRouter>
-      <Header />
+      <Header isAuthorized={isAuthorized} setAuthorized={setAuthorized} />
       <Nav />
       <Switch>
         <Route exact path="/">
@@ -20,9 +24,12 @@ function App() {
         <Route path="/bonusactions">
           <BonusActions />
         </Route>
-        <Route path="/profile">
-          <Profile />
-        </Route>
+        <PrivateRoute
+          isAuthorized={isAuthorized}
+          path="/profile"
+          setAuthorized={setAuthorized}
+          component={Profile}
+        />
       </Switch>
       <Footer />
     </BrowserRouter>

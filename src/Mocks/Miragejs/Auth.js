@@ -2,9 +2,7 @@ import { Response } from "miragejs";
 
 export const emailDispatch = (schema, request) => {
   const { email } = JSON.parse(request.requestBody);
-  console.log(schema.db.users);
   let user = schema.db.users.findBy({ email: email });
-  console.log(user);
   if (!user) {
     user = schema.db.users.insert({ email: email });
   }
@@ -21,7 +19,6 @@ export const codeDispatch = (schema, request) => {
   if (code == user.code) {
     const jwt = fakeJwt();
     schema.db.users.update(user.id, { jwt: jwt, code: "" });
-    console.log(schema.db.users);
     return new Response(200, {}, { error: false, status: "ok", jwt: jwt });
   }
 };

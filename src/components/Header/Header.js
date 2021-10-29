@@ -10,16 +10,12 @@ import UserIcon from "../../layout/UserIcon/UserIcon";
 import { Link } from "react-router-dom";
 import { useEffect } from "react/cjs/react.development";
 
-function Header() {
+function Header({ setAuthorized, isAuthorized }) {
   const [isModal, setModal] = useState(false);
-  const [isLogged, setLogged] = useState();
   const toogleModal = () => {
     setModal(!isModal);
   };
-  useEffect(() => {
-    const isLogged = localStorage.getItem("jwt");
-    setLogged(Boolean(isLogged));
-  });
+
   return (
     <Container id="header">
       <div className="header">
@@ -42,7 +38,7 @@ function Header() {
         </div>
         <div className="header-right">
           <Button text={"Додокоины"} hover={true} width={100} />
-          {!isLogged && (
+          {!isAuthorized && (
             <Button
               fsize={13}
               text={"Войти"}
@@ -51,10 +47,10 @@ function Header() {
               onClick={toogleModal}
             />
           )}
-          {isLogged && <UserIcon to="profile" />}
+          {isAuthorized && <UserIcon to="profile" />}
           {isModal && (
             <Modal close={toogleModal}>
-              <Login close={toogleModal}></Login>
+              <Login close={toogleModal} setAuthorized={setAuthorized}></Login>
             </Modal>
           )}
         </div>
