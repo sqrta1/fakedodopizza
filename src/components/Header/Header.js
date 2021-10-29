@@ -2,16 +2,24 @@ import Button from "../Button/Button";
 import { Container, Row, Col } from "reactstrap";
 import "./Header.css";
 import Logo from "../../media/Logo.svg";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
+import { withRouter } from "react-router";
 import Modal from "../Modal/Modal";
 import Login from "../Login/Login";
+import UserIcon from "../../layout/UserIcon/UserIcon";
 import { Link } from "react-router-dom";
+import { useEffect } from "react/cjs/react.development";
 
 function Header() {
   const [isModal, setModal] = useState(false);
+  const [isLogged, setLogged] = useState();
   const toogleModal = () => {
     setModal(!isModal);
   };
+  useEffect(() => {
+    const isLogged = localStorage.getItem("jwt");
+    setLogged(Boolean(isLogged));
+  });
   return (
     <Container id="header">
       <div className="header">
@@ -34,13 +42,16 @@ function Header() {
         </div>
         <div className="header-right">
           <Button text={"Додокоины"} hover={true} width={100} />
-          <Button
-            fsize={13}
-            text={"Войти"}
-            hover={true}
-            width={75}
-            onClick={toogleModal}
-          />
+          {!isLogged && (
+            <Button
+              fsize={13}
+              text={"Войти"}
+              hover={true}
+              width={75}
+              onClick={toogleModal}
+            />
+          )}
+          {isLogged && <UserIcon to="profile" />}
           {isModal && (
             <Modal close={toogleModal}>
               <Login close={toogleModal}></Login>
@@ -52,4 +63,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default withRouter(Header);

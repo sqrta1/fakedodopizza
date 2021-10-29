@@ -26,6 +26,11 @@ export const codeDispatch = (schema, request) => {
   }
 };
 
+const handleLogout = (schema, request) => {
+  const { jwt } = JSON.parse(request.requestBody);
+  schema.db.users.findBy({ jwt: jwt });
+};
+
 const generateCode = () => {
   return Math.round(Math.random() * (1e5 - 1)) + 1;
 };

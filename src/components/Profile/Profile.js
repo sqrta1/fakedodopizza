@@ -1,10 +1,24 @@
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col } from "reactstrap";
+import Button from "../Button/Button";
+import personalaction from "./personalaction.jpg";
+import Input from "../Input/Input";
+import "./Profile.css";
+import { useHistory } from "react-router";
 
-import personalaction from './personalaction.jpg';
-import Input from '../Input/Input';
-import './Profile.css';
+const logout = async (history) => {
+  const jwt = localStorage.getItem("jwt");
+  localStorage.removeItem("jwt");
+  fetch("logut", { method: "POST", body: JSON.stringify({ jwt: jwt }) }).then(
+    (r) => r.json()
+  );
+  history.push("/");
+};
 
 function Profile() {
+  const history = useHistory();
+  const handleLogout = () => {
+    logout(history);
+  };
   return (
     <div className="profile">
       <div className="profile-actions">
@@ -23,7 +37,11 @@ function Profile() {
           </Row>
         </Container>
       </div>
-      <div className="profile-info"></div>
+      <div className="profile-info">
+        <Container>
+          <Button text="Выйти" width="70" onClick={handleLogout}></Button>
+        </Container>
+      </div>
     </div>
   );
 }
