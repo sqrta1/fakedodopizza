@@ -13,3 +13,8 @@ button div {
   color: rgb(92, 99, 112);
   padding: 5px 7.5px;
 }
+button:disabled {
+  background-color: rgb(226, 226, 233);
+  color: rgb(171, 173, 186);
+  cursor: not-allowed;
+}

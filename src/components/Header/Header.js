@@ -43,7 +43,7 @@ function Header() {
           />
           {isModal && (
             <Modal close={toogleModal}>
-              <Login></Login>
+              <Login close={toogleModal}></Login>
             </Modal>
           )}
         </div>

@@ -7,14 +7,18 @@ import _ from "lodash";
 const Modal = ({ children, close }) => {
   const NodeEl = document.createElement("div");
   NodeEl.setAttribute("id", "modal");
-  const el = document.getElementById('modal') || document.body.appendChild(NodeEl);
+  const el =
+    document.getElementById("modal") || document.body.appendChild(NodeEl);
+  //todo - fix click
   useEffect(() => {
     document.body.classList.add("modal-login");
-    document.querySelector('#modal').addEventListener("click", (e) => {
-      if (e.path[0].id === "modal") close();
+    document.querySelector("#modal").addEventListener("click", (e) => {
+      //console.log(e);
+      if (e.path[0].id === "modal") {
+        close();
+      }
     });
     return () => {
-      document.querySelector("#modal").removeEventListener("click", close);
       document.body.classList.remove("modal-login");
       document.querySelector("#modal").remove();
     };

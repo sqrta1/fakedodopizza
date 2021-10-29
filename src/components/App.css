@@ -1,10 +1,17 @@
 .modal-login {
-  overflow-y: hidden;
+  overflow: hidden !important;
+  position: relative !important;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  margin-left: 0;
+  margin-top: 0;
+  margin-right: 17px !important;
 }
-.container-fluid{
+.container-fluid {
   padding: 0px;
 }
-.container{
+.container {
   padding: 0px;
 }
 @font-face {

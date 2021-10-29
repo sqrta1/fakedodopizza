@@ -1,6 +1,22 @@
+import { Modal } from "bootstrap";
+import { useState } from "react";
 import Button from "../Button/Button";
 import "./OfferItem.css";
-function OfferItem({ imgUrls, title, description, price }, id) {
+
+// const modalInfo = {
+//   type: "pizza",
+//   data: { extraProducts: [] },
+// };
+const ModalTypes = {
+  pizza: <PizzaModal></PizzaModal>,
+};
+
+const ProductModal = ({ data }) => {
+  const { type } = data;
+  return ModalTypes[type];
+};
+function OfferItem({ imgUrls, title, description, price }, id, modalInfo) {
+  const [isModal, setModal] = useState(false);
   const filteredUrls = imgUrls.filter(([url, w]) => w.replace("w", "") <= 300);
   const imgUrl = !filteredUrls.length
     ? imgUrls[0][0]
@@ -20,10 +36,17 @@ function OfferItem({ imgUrls, title, description, price }, id) {
             fsize={16}
             backgroundColor={"rgba(255, 105, 0, 0.2)"}
             color={"rgb(255, 105, 0)"}
-            onClick={()=>{alert('модалка')}}
+            onClick={() => {
+              setModal(!isModal);
+            }}
           />
         </div>
       </div>
+      {isModal && (
+        <Modal>
+          <ProductModal data={modalInfo}></ProductModal>
+        </Modal>
+      )}
     </div>
   );
 }
